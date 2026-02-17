@@ -30,6 +30,10 @@ app.get('/homepage', async (req, res, next) => {
 	}
 });
 
-app.listen(PORT, () => {
-	console.log(`SSR server running on http://localhost:${PORT}`);
-});
+module.exports = app;
+
+if (require.main === module) {
+	app.listen(PORT, () => {
+		console.log(`SSR server running on http://localhost:${PORT}`);
+	});
+}

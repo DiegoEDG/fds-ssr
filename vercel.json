@@ -1,0 +1,14 @@
+{
+	"version": 2,
+	"buildCommand": "pnpm run vercel-build",
+	"routes": [
+		{ "src": "/css/(.*)", "dest": "/public/css/$1" },
+		{ "src": "/assets/(.*)", "dest": "/public/assets/$1" },
+		{ "src": "/(.*)", "dest": "/api/index.js" }
+	],
+	"functions": {
+		"api/index.js": {
+			"includeFiles": "public/**,homepage.html"
+		}
+	}
+}

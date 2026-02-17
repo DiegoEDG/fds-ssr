@@ -9,6 +9,7 @@
 		"build:css": "pnpm run prepare:public && tailwindcss -i ./src/tailwind.css -o ./public/css/outputLab.css --minify",
 		"dev": "pnpm run dev:css & node ./server.js",
 		"build": "pnpm run build:css",
+		"vercel-build": "pnpm run build",
 		"start": "node ./server.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

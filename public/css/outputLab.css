@@ -1273,11 +1273,6 @@ h6 {
   vertical-align: bottom;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .text-\[28px\] {
   font-size: 28px;
 }
@@ -1313,11 +1308,6 @@ h6 {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.text-amber-600 {
-  --tw-text-opacity: 1;
-  color: rgb(217 119 6 / var(--tw-text-opacity, 1));
 }
 
 .text-black {
@@ -1422,6 +1412,24 @@ h6 {
 
 .ease-out {
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+#icon-bigbook {
+  position: fixed;
+  top: 24%;
+  left: 0;
+  z-index: 29;
+  cursor: pointer;
+}
+
+#icon-contact-us {
+  position: fixed;
+  top: 24%;
+  right: 0;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  z-index: 35;
+  height: auto;
 }
 
 .after\:hidden::after {

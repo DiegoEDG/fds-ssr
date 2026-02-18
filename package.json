@@ -1,25 +1,26 @@
 {
-	"name": "fds-ssr",
-	"version": "1.0.0",
-	"description": "",
-	"main": "server.js",
-	"scripts": {
-		"prepare:public": "node -e \"require('fs').mkdirSync('public/css',{recursive:true});require('fs').mkdirSync('public/assets',{recursive:true});\"",
-		"dev:css": "pnpm run prepare:public && tailwindcss -i ./src/tailwind.css -o ./public/css/outputLab.css --watch",
-		"build:css": "pnpm run prepare:public && tailwindcss -i ./src/tailwind.css -o ./public/css/outputLab.css --minify",
-		"dev": "pnpm run dev:css & node ./server.js",
-		"build": "pnpm run build:css",
-		"vercel-build": "pnpm run build",
-		"start": "node ./server.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"keywords": [],
-	"author": "",
-	"license": "ISC",
-	"packageManager": "pnpm@10.7.1",
-	"dependencies": {
-		"@tailwindcss/cli": "^4.1.18",
-		"express": "^5.2.1",
-		"tailwindcss": "^4.1.18"
-	}
+  "name": "fds-ssr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "prepare:public": "node -e \"require('fs').mkdirSync('public/css',{recursive:true});require('fs').mkdirSync('public/assets',{recursive:true});\"",
+    "dev:css": "pnpm run prepare:public && tailwindcss -i ./src/tailwind.css -o ./public/css/outputLab.css --watch",
+    "build:css": "pnpm run prepare:public && tailwindcss -i ./src/tailwind.css -o ./public/css/outputLab.css --minify",
+    "dev": "pnpm run dev:css & node ./server.js",
+    "build": "pnpm run build:css",
+    "vercel-build": "pnpm run build",
+    "start": "node ./server.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
 }

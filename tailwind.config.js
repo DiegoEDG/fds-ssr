@@ -2,7 +2,7 @@
 const colors = require('./utilities/colors');
 
 module.exports = {
-  content: ['homepage.html', 'index.html'],
+  content: ['src/**/*.{html,js,ts,jsx,tsx}', 'index.html'],
   theme: {
     extend: {
       colors,
